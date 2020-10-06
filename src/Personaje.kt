@@ -43,10 +43,12 @@ open class Personaje(var nombre: String, var vivo: Boolean) {
     class Hobbit (nombre: String ,vivo: Boolean,var anillo : Boolean) : Personaje(nombre, vivo) {
 
         fun ponerseAnillo(){
+            println(this.nombre+" se pone el anillo")
             this.anillo = true;
         }
 
         fun quitarseAnillo(){
+            println(this.nombre+" se quita el anillo")
             this.anillo=false;
         }
     }
