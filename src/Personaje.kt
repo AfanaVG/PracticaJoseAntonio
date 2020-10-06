@@ -53,14 +53,21 @@ open class Personaje(var nombre: String, var vivo: Boolean) {
         }
     }
 
-    fun muerte(){
+    fun muerte(probabilidad : Int){
 
-        if (Random.nextInt(0,100) <= 80){
-            println(this.nombre+" ha logrado escapar por un pelo")
-        }else{
-            println(this.nombre+" ha muerto")
-            this.vivo = false
-        }
+
+
+            if (Random.nextInt(0,100) <= probabilidad){
+
+                println(this.nombre+" ha logrado escapar por un pelo")
+
+            }else{
+
+                println(this.nombre+" ha muerto")
+                this.vivo = false
+
+            }
+
 
     }
 }
