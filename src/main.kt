@@ -10,5 +10,11 @@ fun main (args: Array<String>){
 
     gandalf.recargarVara(Random.nextInt(1,29))
     gandalf.poderVara()
+    legolas.lanzarFlecha()
+    legolas.lanzarFlecha()
+    legolas.lanzarFlecha()
+    print("flechas "+legolas.carcaj)
+    legolas.recargarFlechas(1)
+    print("flechas "+legolas.carcaj)
 
 }

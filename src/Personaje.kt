@@ -22,7 +22,17 @@ open class Personaje(var nombre: String, var vivo: Boolean) {
 
     //Subclase de personaje : Elfo
     class Elfo (nombre: String ,vivo: Boolean,var carcaj : Int) : Personaje(nombre, vivo) {
+        fun lanzarFlecha(){
+            this.carcaj -=1;
+        }
+        fun recargarFlechas(flechas : Int){
+            if (this.carcaj + flechas > 20){
+                this.carcaj = 20;
+            }else{
+                this.carcaj +=flechas;
+            }
 
+        }
     }
 
     //Subclase de personaje : Hobbit
