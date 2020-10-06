@@ -53,9 +53,8 @@ open class Personaje(var nombre: String, var vivo: Boolean) {
         }
     }
 
+    //Esta funcion decidira si nuestro personaje logra huir o muere
     fun muerte(probabilidad : Int){
-
-
 
             if (Random.nextInt(0,100) <= probabilidad){
 
