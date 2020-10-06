@@ -29,6 +29,7 @@ open class Personaje(var nombre: String, var vivo: Boolean) {
         //Recarga las flechas por un valor obtenido de un objeto Sala de la subclase Accion
         fun recargarFlechas(flechas : Int){
             //Controla el carcaj no supere 20 flechas
+            println(this.nombre+" ha encontrado "+flechas+" flechas")
             if (this.carcaj + flechas > 20){
                 this.carcaj = 20;
             }else{
