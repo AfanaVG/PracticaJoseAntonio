@@ -1,3 +1,6 @@
+import java.io.File
+import java.io.FileOutputStream
+import java.io.InputStreamReader
 import kotlin.random.Random
 
 fun main (args: Array<String>){
@@ -9,6 +12,13 @@ fun main (args: Array<String>){
     var salaM : Sala.Magico;
     var salaA : Sala.Accion;
     var salaH : Sala.Habilidad;
+
+    //Fichero de escritura
+    var f : String = "moria.txt";
+
+    //String de victoria del fichero
+    var fVictoria : String;
+
 
     var ranSala : Int; //Guardara un int que indica que sala se genera
     var n : Int =0; //Contador de salas superadas
@@ -97,10 +107,21 @@ fun main (args: Array<String>){
     //Si la variable "n" es 36 implica que todos han sobrevivido
     if (n == 36){
         println("Nuestros heroes han sobrevivido")
+        fVictoria = "Victoria"
     }else{
         println("Lamentablemente nuestros heroes han muerto")
+        fVictoria = "Derrota"
     }
+    print("Resultado :"+fVictoria+"\n"+
+            "Numero de salas superadas : "+n+"\n"+
+            "Numero de salas no superadas : "+(36-n)+"\n")
 
+    //Escribe en el fichero de forma que se añada nuevo texto y no sobreescriba texto existente
+    File(f).appendText("Resultado :"+fVictoria+"\n"+
+            "Numero de salas superadas : "+n+"\n"+
+            "Numero de salas no superadas : "+(36-n)+"\n")
+
+    File(f).appendText("\n")
 }
 
 
