@@ -8,10 +8,10 @@ open class Personaje(var nombre: String, var vivo: Boolean) {
          fun recargarVara(energia: Int){
 
             //Controla que la energia no pase de 30
-             if(this.energia+(30-energia) > 30){
+             if(this.energia+energia > 30){
                  this.energia = 30;
              }else{
-                 this.energia = this.energia+(30-energia);
+                 this.energia = this.energia+energia;
              }
          }
         //Muestra la energia actual de la vara
@@ -48,5 +48,16 @@ open class Personaje(var nombre: String, var vivo: Boolean) {
         fun quitarseAnillo(){
             this.anillo=false;
         }
+    }
+
+    fun muerte(){
+
+        if (Random.nextInt(0,100) <= 80){
+            println(this.nombre+" ha logrado escapar por un pelo")
+        }else{
+            println(this.nombre+" ha muerto")
+            this.vivo = false
+        }
+
     }
 }
