@@ -22,6 +22,7 @@ open class Personaje(var nombre: String, var vivo: Boolean) {
 
     //Subclase de personaje : Elfo
     class Elfo (nombre: String ,vivo: Boolean,var carcaj : Int) : Personaje(nombre, vivo) {
+
         fun lanzarFlecha(){
             this.carcaj -=1;
         }
@@ -38,5 +39,12 @@ open class Personaje(var nombre: String, var vivo: Boolean) {
     //Subclase de personaje : Hobbit
     class Hobbit (nombre: String ,vivo: Boolean,var anillo : Boolean) : Personaje(nombre, vivo) {
 
+        fun ponerseAnillo(){
+            this.anillo = true;
+        }
+
+        fun quitarseAnillo(){
+            this.anillo=false;
+        }
     }
 }
