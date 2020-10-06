@@ -22,11 +22,13 @@ open class Personaje(var nombre: String, var vivo: Boolean) {
 
     //Subclase de personaje : Elfo
     class Elfo (nombre: String ,vivo: Boolean,var carcaj : Int) : Personaje(nombre, vivo) {
-
+        //Resta flechas del carcaj de este personaje
         fun lanzarFlecha(){
             this.carcaj -=1;
         }
+        //Recarga las flechas por un valor obtenido de un objeto Sala de la subclase Accion
         fun recargarFlechas(flechas : Int){
+            //Controla el carcaj no supere 20 flechas
             if (this.carcaj + flechas > 20){
                 this.carcaj = 20;
             }else{
