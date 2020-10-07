@@ -10,6 +10,10 @@ open class Personaje(var nombre: String, var vivo: Boolean) {
             //Controla que la energia no pase de 30
              if(this.energia+energia > 30){
                  this.energia = 30;
+
+              //Controla que la energia no sea menos de 1
+             }else if(this.energia<1){
+                this.energia=1;
              }else{
                  this.energia = this.energia+energia;
              }
@@ -32,7 +36,10 @@ open class Personaje(var nombre: String, var vivo: Boolean) {
             println(this.nombre+" ha encontrado "+flechas+" flechas")
             if (this.carcaj + flechas > 20){
                 this.carcaj = 20;
-            }else{
+            //Controla que siempre tengamos una flecha
+            }else if(this.carcaj<1){
+                this.carcaj=1;
+            } else{
                 this.carcaj +=flechas;
             }
 

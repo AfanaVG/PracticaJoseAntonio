@@ -24,7 +24,7 @@ open class Sala(var tipo: String) {
     class  Habilidad(tipo: String) : Sala(tipo){
 
         fun completarHabilidad(){
-            this.tipo = "magico"
+            this.tipo = "habilidad"
         }
 
     }
