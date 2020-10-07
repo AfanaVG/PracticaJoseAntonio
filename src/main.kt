@@ -28,7 +28,7 @@ fun main (args: Array<String>){
     do {//El bucle se realizara hasta que se completen 36 salas o alguien muera
         ranSala = Random.nextInt(1,4) //Genera un numero del 1 al 4 para decidir la sala
 
-        if (ranSala==1 && gandalf.vivo){/*
+        if (ranSala==1 && gandalf.vivo){
             salaM = Sala.Magico("",0)
             salaM.completarMagico()
             gandalf.recargarVara(Random.nextInt(1,10))
@@ -65,9 +65,9 @@ fun main (args: Array<String>){
                     gandalf.muerte(80)
                 }
 
-            }*/
+            }
 
-        }else if (ranSala==2 && legolas.vivo){/*
+        }else if (ranSala==2 && legolas.vivo){
             salaA = Sala.Accion("",0,0)
             salaA.completarAccion()
             //Legolas disparara hasta acabar con todos los enemigos o se quede sin flechas
@@ -86,7 +86,7 @@ fun main (args: Array<String>){
                 if(legolas.vivo && salaA.enemigos==0){
                     legolas.recargarFlechas(salaA.flechas)
                 }
-            }*/
+            }
         }else if (ranSala==3 && frodo.vivo){
             salaH = Sala.Habilidad("")
             salaH.completarHabilidad()
